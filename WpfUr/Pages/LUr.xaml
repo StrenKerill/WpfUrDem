@@ -1,0 +1,38 @@
+﻿<Page x:Class="WpfUr.Pages.LUr"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfUr.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LUr">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="AliceBlue" Grid.Row="0"/>
+        <Label Content="Линейное уравнение" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0" Grid.Row="0"/>
+        <Button Click="btnBack" Content="Вернуться" FontSize="17" Height="30" Width="120" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Введите а:"/>
+                    <TextBox x:Name="a" Width="120" Margin="20 10 0 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Введите b:"/>
+                    <TextBox x:Name="b" Width="120" Margin="20 10 0 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Введите c:"/>
+                    <TextBox x:Name="c" Width="120" Margin="20 10 0 0"/>
+                </StackPanel>
+                <Button Width="120" Height="30" Content="Посчитать" FontSize="17" Margin="0 10 0 0" Click="btnAdd"/>
+            </StackPanel>
+            <TextBlock x:Name="result" Width="200" Margin="20 0 0 0"/>
+        </StackPanel>
+    </Grid>
+</Page>
